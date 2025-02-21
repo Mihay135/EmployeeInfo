@@ -516,6 +516,11 @@ public class EmployeeForm extends JFrame {
 		});
 		
 		JButton btnPrintRecords = new JButton("Print");
+		btnPrintRecords.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				database.displayDatabase(conn, "records");
+			}
+		});
 		btnPrintRecords.setMargin(new Insets(4, 14, 4, 14));
 		btnPrintRecords.setForeground(Color.WHITE);
 		btnPrintRecords.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
