@@ -327,6 +327,13 @@ public class EmployeeForm extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel model = (DefaultTableModel)table.getModel();
 				int selectedIndex = table.getSelectedRow();
+				if(selectedIndex == -1) {
+					JOptionPane.showMessageDialog(contentPane, 
+	                        "No rows selected!", 
+	                        "Warning", 
+	                        JOptionPane.WARNING_MESSAGE);
+				return;
+				}
 				
 				int id = Integer.parseInt((model.getValueAt(selectedIndex, 0).toString()));
 				database.deleteFromRecordsTable(conn, id);
@@ -349,7 +356,13 @@ public class EmployeeForm extends JFrame {
 				
 				DefaultTableModel model = (DefaultTableModel)table.getModel();
 				int selectedIndex = table.getSelectedRow();
-				
+				if(selectedIndex == -1) {
+					JOptionPane.showMessageDialog(contentPane, 
+	                        "No rows selected!", 
+	                        "Warning", 
+	                        JOptionPane.WARNING_MESSAGE);
+				return;
+				}
 				int id = Integer.parseInt((model.getValueAt(selectedIndex, 0).toString()));
 				String firstName, lastName, phone, email, city, salary;
 				
@@ -359,7 +372,8 @@ public class EmployeeForm extends JFrame {
 				email = txtEmail.getText();
 				city = txtCity.getText();
 				salary = txtAnnualSalary.getText();
-	
+				
+				
 				database.updateTableRecords(conn, firstName, lastName, phone, email, city, Double.valueOf(salary), id);
 				database.displayDatabase(conn, "records");
 				
@@ -452,7 +466,7 @@ public class EmployeeForm extends JFrame {
 					System.out.println(firstName);
 					
 				}else {
-					System.out.println("Not enough fields filled");
+					System.out.println("Not enough fields filled, need salary and an identifier field");
 				}
 					
 				
