@@ -6,10 +6,12 @@
 
 ## 📸 Screenshots
 
-| Form and Table View |
+| **Form and Table View** |
 |----------------|
 |![Form and Table](images/form_table_view1.png) |
+| **Inserting Values** |
 | ![Inserting Values](images/form_table_inserting_values.png) | 
+| **Changes are Reflected in DB View** |
 |![Values Reflected in DB](images/form_table_view2.png) |
 | *The split-pane GUI with form and table* | 
 
