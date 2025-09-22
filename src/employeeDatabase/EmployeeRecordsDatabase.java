@@ -152,14 +152,4 @@ public class EmployeeRecordsDatabase {
 		}
 	}
 	
-	public static void main(String[] args) {
-		EmployeeRecordsDatabase database = new EmployeeRecordsDatabase();
-		Connection conn = database.connectToDB();
-		
-		database.createTable(conn, "records");
-		database.insertIntoRecords(conn, "Mihai", "Sauca", "000", "s.adsl", "Firenze", (double)25000.0);
-		database.insertIntoRecords(conn, "Mihai", "Sauca", "000", "s.adsl", "Firenze", (double)25000.0);
-		database.displayDatabase(conn, "records");
-		database.closeConnection(conn);
-	}
 }
