@@ -97,22 +97,23 @@ Note: Replace lib/sqlite-jdbc-3.42.0.jar with the actual path to your SQLite JDB
 
 - 4 **Row Selection**: For Edit or Delete, select a row in the table first. If no row is selected, a warning dialog appears.
 
-## 📂 Project Structure
+## 📂 Project Structure (simplified)
 ```bash
 EmployeeManager/
-├── src/
-│   ├── Main.java              # Entry point for the application
-│   ├── Employee.java          # Employee model class
-│   ├── DatabaseHandler.java   # SQLite database operations
-│   ├── EmployeeGUI.java       # Swing GUI implementation
-├── tests/
-│   ├── EmployeeDatabaseTest.java              # Test Class for the database
-├── Referenced Libraries/
-│   ├── sqlite-jdbc-3.42.0.jar # SQLite JDBC driver
-├── employees.db               # SQLite database file (generated on first run)
-├── pom.xml                   # Maven configuration (optional)
-├── README.md                 # This file
-├── images/                   # Folder for screenshots
+|-- bin/                        # Binaries class files
+|-- src/                       # Java files
+│   |-- employeeForm/          # Entry point for the application
+│   |-- employeeDatabase/      # Employee database SQLite operations class
+│   |-- jValidators/           # Logic for input fields in the app
+|-- tests/
+│   |-- EmployeeDatabaseTest.java  # Test Class for the database
+|-- Referenced Libraries/
+│   |-- sqlite-jdbc-3.42.0.jar # SQLite JDBC driver
+|-- employees.db               # SQLite database file (generated on first run)
+|-- pom.xml                   # Maven configuration (optional)
+|-- README.md                 # This file
+|-- images/                   # Folder for screenshots
+|...  #other files
 ```
 
 ## 🔧 Usage Notes
