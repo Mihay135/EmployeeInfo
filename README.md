@@ -49,7 +49,7 @@ To run EmployeeManager, ensure you have:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/EmployeeManager.git
+git clone https://github.com/Mihay135/EmployeeManager.git
 cd EmployeeManager
 ```
 
